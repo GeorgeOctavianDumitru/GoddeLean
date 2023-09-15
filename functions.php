@@ -2,12 +2,31 @@
     //Load Styleshets
     function load_css()
     {
-        wp_register_style('bootstrap',get_template_directory_uri().'/css/bootstrap.min.css',
+        wp_register_style('bootstrap',get_template_directory_uri().'/css/BootStrap/bootstrap.min.css',
         array(),false,'all');
         wp_enqueue_style('bootstrap');
         wp_register_style('custom-style',get_template_directory_uri().'/css/custom-style.css',
         array(),false,'all');
         wp_enqueue_style('custom-style');
+        wp_register_style('header-style',get_template_directory_uri().'/css/header-style.css',
+        array(),false,'all');
+        wp_enqueue_style('header-style');
+        wp_register_style('footer-style',get_template_directory_uri().'/css/footer-style.css',
+        array(),false,'all');
+        wp_enqueue_style('footer-style');
+        if(is_front_page()){
+            wp_register_style('front-page-style',get_template_directory_uri().'/css/front-page-style.css',
+            array(),false,'all');
+            wp_enqueue_style('front-page-style');
+        }
+
+        if (is_page_template('template-contactus.php')) {
+            wp_register_style('contact-us-style', get_template_directory_uri().'/css/contactUs.css', array(), false, 'all');
+            wp_enqueue_style('contact-us-style');}
+
+
+
+
     }
     add_action('wp_enqueue_scripts','load_css');
 
@@ -37,3 +56,4 @@
             'mobile-menu' =>'Mobile Menu Location',
         )
     );
+    
