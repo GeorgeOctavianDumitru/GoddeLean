@@ -1,0 +1,36 @@
+main {
+  border: 1px solid;
+  /* margin-top: 10dvh; */
+  background-color: #003367;
+}
+.hero__container {
+  min-height: 70dvh;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content-container {
+  margin-inline: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.content-container > div {
+  margin-inline: 1fr;
+}
+.contact_encouragement_container {
+  color: #fff;
+
+  flex: 1;
+}
+.form-container {
+  background-color: #fff;
+  flex: 1;
+}
+#contactUs_Form {
+  background: red;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}

@@ -1,0 +1,73 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 0px;
+    background-color:transparent;
+    height: 100vh; /* Ensure the body fills the viewport height */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    scrollbar-gutter: stable both-edges;
+}
+body section{
+    margin:0 auto;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+  }
+   
+  body::-webkit-scrollbar-track {
+    background-color: transparent!important;
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+    border-radius:1rem; 
+  }
+
+
+/* #region AspSimilar style
+ */
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+.navbar-inverse .navbar-brand {
+    color: #AA77FF !important;
+}
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    background-color: #777;
+    border-color: #fff
+}
+/* #endregion */
+
+.text-centre{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}

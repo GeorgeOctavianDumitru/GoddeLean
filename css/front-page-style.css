@@ -1,0 +1,156 @@
+.hero__container {
+  min-height: 100dvh;
+  /* margin-top:-15vh; */
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* z-index:-3; */
+  /* box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75); */
+}
+.hero__container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -3;
+}
+.hero__overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  display: flex; /* Use flexbox for the parent */
+  justify-content: center; /* Center the child horizontally */
+  align-items: center; /* Center the child vertically */
+}
+
+.hero__actionList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.hero__actionList > li a {
+  padding: 1rem 3rem;
+  margin-inline: 1rem;
+  border-radius: 5px;
+  color: white;
+}
+#ContactBtn {
+  background-color: #e98300;
+}
+#LearMoreBtn {
+  border: 1px solid;
+}
+
+.section_ourServices,
+.section__Technologies {
+  min-height: 100dvh;
+  text-align: center;
+  margin-inline: 10%;
+
+  /* background: #123 url(//unsplash.it/900);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: white;
+    text-align: center; */
+}
+
+.items-flex {
+  display: flex;
+  padding: 2rem;
+}
+.section_ourServices .heading {
+  padding: 2rem;
+}
+.items-flex > div {
+  padding: 1rem;
+}
+.tab-link {
+  --spacing: 1em;
+  text-wrap: nowrap;
+  padding: 1rem;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+.tab-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: var(--spacing);
+  right: var(--spacing);
+  height: 2px;
+  background: #e98300;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  transition: -webkit-transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+}
+.tab-link:hover::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.tab-content {
+  text-align: left;
+}
+.is-active,
+h4.title {
+  color: #3168dd;
+  font-weight: 400;
+}
+h4.title {
+  font-weight: 500;
+  text-decoration: underline;
+}
+.tab-content {
+  transition: display 0.3s ease; /* You can adjust the duration and easing as needed */
+}
+
+.section__Technologies {
+  color: #fff;
+  background-color: #3169dd;
+  margin: 0;
+}
+.section__Technologies .heading {
+  padding: 2rem;
+}
+.card h5 {
+  color: #000;
+}
+.card {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding-block: 10px;
+  margin-inline: 1rem;
+}
+.card > ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; /* Allows flex items to wrap to the next row */
+  flex-direction: row; /* Default direction, can be omitted */
+  justify-content: flex-start;
+  padding: 0;
+}
+.card > ul li {
+  text-wrap: nowrap;
+  margin-inline: 0.25rem;
+  border-right: 3px solid #ccc;
+  color: #46484a;
+  padding-right: 0.5rem;
+}
+.card > ul > li:last-child {
+  border: none;
+}
