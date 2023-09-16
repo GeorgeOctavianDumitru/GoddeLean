@@ -91,17 +91,18 @@
   bottom: 0;
   left: var(--spacing);
   right: var(--spacing);
-  height: 2px;
-  background: #e98300;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  transition: -webkit-transform 150ms ease-in-out;
-  transition: transform 150ms ease-in-out;
-  transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+  height: 1px;
+  background: #000;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 150ms ease-in-out;
 }
 .tab-link:hover::after {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+  background: #3168dd;
 }
 .tab-content {
   text-align: left;

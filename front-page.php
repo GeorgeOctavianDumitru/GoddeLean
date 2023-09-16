@@ -64,10 +64,9 @@
                     </div>
                     <div class="tab-content" id="DigitalTransformationDetails">
                         <h4 class="title"> Digital Transformation</h4>
-                        <p>Skillfully tackling intricate business challenges, I excel in creatively, efficiently, and pragmatically solving complex issues. My freelance software engineering services offer unique access to rapidly evolving technologies and deliver impeccable, user-friendly software solutions.</p>
+                            <p>Proficiently navigating the ever-changing landscape of digital transformation, I specialize in orchestrating transformative strategies that revolutionize businesses. My freelance digital transformation consultancy services provide a gateway to harnessing the full potential of emerging technologies while delivering seamless, client-focused solutions.</p>
 
-                        <p>With my innovative software engineering solutions, you can empower businesses. I leverage my expertise to develop comprehensive applications that take your business to the next level.</p>
-                       
+                            <p>Through my innovative approach to digital transformation, you can empower your organization to embrace the future. I leverage my expertise to design holistic strategies and implement cutting-edge solutions that propel your business into the forefront of the digital age.</p>
                         <a href="#" class="learn-more">
                             "Learn More"
                             <i class="round-arrow-icon"></i>
@@ -77,10 +76,8 @@
                     </div>
                     <div class="tab-content" id="WebDevDetails">
                         <h4 class="title" > Web Development</h4>
-                        <p>Skillfully tackling intricate business challenges, I excel in creatively, efficiently, and pragmatically solving complex issues. My freelance software engineering services offer unique access to rapidly evolving technologies and deliver impeccable, user-friendly software solutions.</p>
-
-                        <p>With my innovative software engineering solutions, you can empower businesses. I leverage my expertise to develop comprehensive applications that take your business to the next level.</p>
-                       
+                            <p>"Masterfully crafting digital experiences, I thrive in bringing creative, efficient, and user-centric web solutions to life. My freelance web development services grant you access to the latest web technologies, ensuring the delivery of polished, user-friendly websites and applications.</p>
+                            <p>With my innovative web development solutions, you can elevate your online presence. I leverage my expertise to design and build comprehensive web solutions that take your business to new heights, making a lasting impact in the digital realm."</p>
                         <a href="#" class="learn-more">
                             "Learn More"
                             <i class="round-arrow-icon"></i>
@@ -90,10 +87,8 @@
                     </div>
                     <div class="tab-content" id="LeanMfgDetails">
                         <h4 class="title" > Lean Manufacturing</h4>
-                        <p>Skillfully tackling intricate business challenges, I excel in creatively, efficiently, and pragmatically solving complex issues. My freelance software engineering services offer unique access to rapidly evolving technologies and deliver impeccable, user-friendly software solutions.</p>
-
-                        <p>With my innovative software engineering solutions, you can empower businesses. I leverage my expertise to develop comprehensive applications that take your business to the next level.</p>
-                       
+                            <p>"Strategically streamlining manufacturing processes, I excel in optimizing operations to eliminate waste, enhance efficiency, and boost productivity. My freelance Lean Manufacturing services offer a pathway to achieving leaner, more agile production methods while delivering cost-effective solutions."</p>
+                            <p>"With my innovative Lean Manufacturing solutions, you can empower your business to operate at peak performance. I leverage my expertise to develop customized strategies and implement Lean principles that propel your manufacturing processes to the forefront of industry standards, ensuring sustainable growth and competitiveness."</p>
                         <a href="#" class="learn-more">
                             "Learn More"
                             <i class="round-arrow-icon"></i>
