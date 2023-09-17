@@ -50,10 +50,28 @@
     add_theme_support('menus');
 
     //Menus
-    register_nav_menus(
-        array(
-            'top-menu' =>'Top Menu Location',
-            'mobile-menu' =>'Mobile Menu Location',
-        )
-    );
+    // register_nav_menus(
+    //     array(
+    //         'top-menu' =>'Top Menu Location',
+    //         'mobile-menu' =>'Mobile Menu Location',  
+    //     )
+    // );
+    // register_nav_menus(
+    //     array(
+    //         'footer-support-menu'=>'Footer Support Location',
+    //         'footer-company-menu'=>'Footer Company Location',   
+    //     )
+    // );
     
+
+function wpb_custom_new_menu() {
+  register_nav_menus(
+    array(
+      'top-menu' => __( 'Top Menu Location' ),
+      'mobile-menu' => __( 'Mobile Menu Location' ),
+      'footer-support-menu' => __( 'Footer Support Location' ),
+      'footer-company-menu' => __( 'Footer Company Location' )
+    )
+  );
+}
+add_action( 'init', 'wpb_custom_new_menu' );
