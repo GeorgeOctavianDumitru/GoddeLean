@@ -34,8 +34,26 @@
                             )
                         );  ?>
             </div>
-            <div class="footer__column"></div>
-            <div class="footer__column"></div>
+            <div class="footer__column">
+                <h5>Support</h5>
+                 <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'footer-company-menu',
+                            'menu_class' => 'footer-menu'
+                            )
+                        );  ?>
+            </div>
+            <div class="footer__column">
+                <div class="sub__footer__message">
+                    <i class="bi bi-envelope-plus-fill"></i>
+                    <p>Stay up to date with the latest from GoddeLean:</p>
+                </div>    
+                <form id="newsSubscribeForm">
+                    <input type="text" id="tb_email" placeholder="Enter your e-mail:"/ >
+                    <input type="button" id="btnSubscribe" value="Sign-up"/>
+                </form>
+            </div>
             
         </div>
     </body>

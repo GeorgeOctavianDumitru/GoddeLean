@@ -60,3 +60,17 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+const elementToModify = document.querySelector(".no-wrap");
+const mediaQuery = window.matchMedia('(max-width: 768px');
+
+function handleMediaChange(event){
+  if(event.matches){
+    elementToModify.classList.remove('no-wrap');
+  }
+  else{
+    elementToModify.classList.add('no-wrap');
+  }
+}
+mediaQuery.addEventListener(handleMediaChange);
+handleMediaChange(mediaQuery);

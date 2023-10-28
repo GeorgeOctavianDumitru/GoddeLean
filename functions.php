@@ -19,7 +19,17 @@
             array(),false,'all');
             wp_enqueue_style('front-page-style');
         }
+        if(is_single()){
+            wp_register_style('single-style',get_template_directory_uri().'/css/single.css',
+            array(),false,'all');
+            wp_enqueue_style('single-style');
+        }
 
+        if(is_page_template('template-archive.php')){
+            wp_register_style('archive-page-style',get_template_directory_uri().'/css/archive.css',
+            array(),false,'all');
+            wp_enqueue_style('archive-page-style');
+        }
         if (is_page_template('template-contactus.php')) {
             wp_register_style('contact-us-style', get_template_directory_uri().'/css/contactUs.css', array(), false, 'all');
             wp_enqueue_style('contact-us-style');}
@@ -43,6 +53,14 @@
         //enqueue Theme Javascript Files
         wp_register_script('app', get_template_directory_uri() . '/js/app.js', 'jqueryLoc',false,true);
         wp_enqueue_script('app');
+        if(is_single()){
+            wp_register_script('single', get_template_directory_uri() . '/js/single.js', 'jqueryLoc',false,true);
+            wp_enqueue_script('single');
+        }
+        if(is_page_template('template-contactus.php')){
+            wp_register_script('contactForm',get_template_directory_uri().'/js/ContactForm.js', 'jqueryLoc',false,true);
+            wp_enqueue_script('contactForm');
+        }
     }
     add_action('wp_enqueue_scripts','load_js');
 
@@ -75,3 +93,26 @@ function wpb_custom_new_menu() {
   );
 }
 add_action( 'init', 'wpb_custom_new_menu' );
+
+function get_first_image_in_post_content() {
+    global $post;
+
+    // Get the post content
+    $content = $post->post_content;
+
+    // Find the first image in the post content
+    preg_match('/<img.+?src=["\'](.+?)["\'].*?>/i', $content, $matches);
+
+    // Return the first image URL if found, or false if not found
+    if (isset($matches[1])) {
+        return $matches[1];
+    } else {
+        return false;
+    }
+}
+function theme_setup() {
+    // Enable featured image support
+    add_theme_support('post-thumbnails');
+}
+
+add_action('after_setup_theme', 'theme_setup');

@@ -1,0 +1,140 @@
+main {
+  border: 1px solid;
+  /* margin-top: 10dvh; */
+}
+.hero__container {
+  background-color: #003367;
+  min-height: 50dvh;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+}
+.section__Archive {
+  min-height: 100dvh;
+}
+.container {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.post__container {
+  margin-inline: 1rem;
+  max-width: 375px;
+  transition: all 0.3s ease;
+}
+.post__container:hover {
+  border-color: #98c8f8;
+  transform: scale(1.02);
+}
+.post-excerpt > h2 {
+  font-size: 1.25rem;
+  text-align: center;
+}
+.post-excerpt > p {
+  font-size: 0.9rem;
+}
+
+.post-categories {
+  display: flex;
+  position: relative;
+  list-style: none;
+  margin-top: 1rem;
+  padding: 0;
+  margin-inline: 0;
+}
+.post-categories > li {
+  padding-inline: 0.5rem;
+  padding-block: 0.1rem;
+  font-size: 0.75rem;
+  background-color: #98c8f8;
+  color: #003366;
+  border-radius: 0.2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+/* .filtersContainer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.formElementContainer {
+  padding-inline: 1rem;
+}
+#ddl_Category {
+  padding: 0.25rem;
+} */
+/* Style the container to control the layout */
+.filtersContainer {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+  justify-content: center;
+  padding: 1rem;
+  margin-inline: 20%;
+}
+
+/* Style the form element container to control the layout */
+.formElementContainer {
+  flex: 1; /* Distribute available space equally among form element containers */
+  margin: 0 10px; /* Add margin for spacing between form elements */
+  text-align: left; /* Center-align the content within each container */
+  margin-inline: 3rem;
+}
+
+/* Style the label to appear on top of the input */
+label {
+  display: block; /* Make labels block-level elements */
+  margin-bottom: 5px; /* Add some spacing between label and input */
+  color: #6d6d6d;
+}
+
+/* Style the input and select elements */
+input.textbox,
+select {
+  width: 100%; /* Make inputs and selects take up the entire container width */
+  padding: 0.25rem;
+  min-height: 2.2rem;
+  max-width: none;
+  min-width: 300px;
+  border-radius: 7px;
+  border: 1px solid;
+  border-color: #ccc;
+  outline: transparent;
+  padding-inline: 0.5rem;
+}
+input.textbox:hover,
+select:hover,
+input.textbox:focus-within,
+select:focus-within {
+  border-color: #98c8f8;
+}
+
+.auth {
+  font-style: italic;
+  font-weight: 600;
+}
+.post-thumbnail {
+  min-height: 200px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 7px 7px 0px 0px;
+}
+.post-thumbnail > img {
+  width: 100%;
+  max-height: 150px;
+  margin: -1.25rem;
+}
+.card-body {
+  padding: 0 !important;
+}
+.card-data {
+  padding: 1.25rem;
+}
+.card {
+  border-radius: 7px;
+  max-width: 325px;
+}

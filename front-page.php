@@ -1,8 +1,7 @@
 <?php get_template_part('template-parts/header');?>
 
 <main class="contentStart">
-<section class="hero__container">
-    
+    <section class="hero__container"> 
     <div class="hero__overlay">
        <div class="hero__contentContainer">
             <div class="hero__message">
@@ -18,7 +17,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#servicesSection" id="LearMoreBtn">Learn More</a>
+                        <a href="#ourServicesSection" id="LearMoreBtn">Learn More</a>
                     </li>
                 </ul>
             </div>
@@ -33,6 +32,10 @@
     
     </section>
 
+
+
+
+
     <section class="section_ourServices" id="ourServicesSection">
         <div class="ourServices__Container">
         <div class="heading text-centre">
@@ -46,6 +49,7 @@
                         <h3 class="tab-link">Digital Transformation</h3>
                         <h3 class="tab-link">Web Development</h3>
                         <h3 class="tab-link">Lean Manufacturing</h3>
+                        <h3 class="tab-link">Data Analytics & Visualization</h3>
                     </div>
                 </div>
                 <div class="right-tabs">
@@ -96,6 +100,19 @@
 
                         </a>
                     </div>
+                    <div class="tab-content" id="DataVizDetails">
+                        <h4 class="title" > Data Analytics & Visualizaion</h4>
+                        <p>Skillfully tackling intricate business challenges, I excel in creatively, efficiently, and pragmatically solving complex issues. My freelance software engineering services offer unique access to rapidly evolving technologies and deliver impeccable, user-friendly software solutions.</p>
+
+                        <p>With my innovative software engineering solutions, you can empower businesses. I leverage my expertise to develop comprehensive applications that take your business to the next level.</p>
+                       
+                        <a href="#" class="learn-more">
+                            "Learn More"
+                            <i class="round-arrow-icon"></i>
+                        </a>
+
+                        </a>
+                    </div>
                 </div>
                     
             </div>
@@ -106,8 +123,10 @@
         <div class="technologiesContainer">
             <div class="heading text-center">
                 <h2>Technologies and Platforms</h2>
+                <br/>
+                <p class="front-page-info">We offer you cutting edge solutions tailored to your specific needs by staying at the forefront of technological advancements. Our deep understanding of the latest digital platforms and technologies helps us drive your business forward and give you an edge over the competition.</p>
             </div>
-            <div class="items-flex">
+            <div class="items-flex wrap">
                 <div class="card">
                     <h5>Backend</h5>
                     <ul class="techList">
@@ -144,7 +163,19 @@
                         <li class="techItem">WordPress</li>
                     </ul>
                 </div>
+                <div class="card">
+                    <h5>Data Analytics and Visualization</h5>
+                    <ul class="techList">
+                        <li class="techItem">Power Bi</li>
+                        <li class="techItem">Grafana</li>
+                    </ul>
+                </div>
             </div>
+        </div>
+        <div class="technologiesCall">
+            <a href="/contactus" class="no-decoration" id = "ContactBtnTech" data-tool-tip="Book a free consultation!">
+                Book a free consultation!
+            </a>
         </div>
     </section>
 </main>

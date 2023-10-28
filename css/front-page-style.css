@@ -70,6 +70,14 @@
 .items-flex {
   display: flex;
   padding: 2rem;
+  flex-wrap: no-wrap;
+  flex-direction: row;
+}
+.no-wrap {
+  flex-wrap: nowrap;
+}
+.wrap {
+  flex-wrap: wrap;
 }
 .section_ourServices .heading {
   padding: 2rem;
@@ -77,10 +85,14 @@
 .items-flex > div {
   padding: 1rem;
 }
+.ourServices__Container {
+  min-height: 75dvh;
+}
 .tab-link {
   --spacing: 1em;
+  font-size: 1.2rem;
   text-wrap: nowrap;
-  padding: 1rem;
+  padding: 0.5rem;
   text-align: left;
   cursor: pointer;
   position: relative;
@@ -106,6 +118,23 @@
 }
 .tab-content {
   text-align: left;
+  transition: all 0.3s ease; /* You can adjust the duration and easing as needed */
+}
+.tab-content > a {
+  background-color: #e98300;
+  border: 1px solid #e98300;
+  border-radius: 7px;
+  color: white;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  text-decoration: none; /* Remove the default underline */
+  overflow: hidden; /* Hide any overflow for the pseudo-elements */
+  transition: all 0.3s ease;
+  outline: transparent;
+  text-wrap: wrap;
 }
 .is-active,
 h4.title {
@@ -116,17 +145,18 @@ h4.title {
   font-weight: 500;
   text-decoration: underline;
 }
-.tab-content {
-  transition: display 0.3s ease; /* You can adjust the duration and easing as needed */
-}
 
 .section__Technologies {
   color: #fff;
   background-color: #3169dd;
   margin: 0;
+  padding-inline: 10%;
 }
 .section__Technologies .heading {
   padding: 2rem;
+}
+.front-page-info {
+  margin-inline: 10%;
 }
 .card h5 {
   color: #000;
@@ -135,7 +165,9 @@ h4.title {
   flex: 1;
   border: 1px solid #ccc;
   padding-block: 10px;
-  margin-inline: 1rem;
+  margin: 1rem;
+  min-width: 300px;
+  min-height: 200px;
 }
 .card > ul {
   list-style: none;
@@ -155,4 +187,77 @@ h4.title {
 }
 .card > ul > li:last-child {
   border: none;
+}
+.no-underline {
+  text-decoration: none; /* Remove the default underline on hover */
+}
+
+.technologiesCall {
+  padding-block: 4rem;
+  text-align: center; /* Center the button text */
+  position: relative;
+}
+.technologiesCall > #ContactBtnTech {
+  background-color: #e98300;
+  border: 1px solid #e98300;
+  border-radius: 7px;
+  color: white;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  text-decoration: none; /* Remove the default underline */
+  overflow: hidden; /* Hide any overflow for the pseudo-elements */
+  transition: all 0.3s ease;
+  outline: transparent;
+  text-wrap: wrap;
+}
+.technologiesCall > #ContactBtnTech:hover,
+.technologiesCall > #ContactBtnTech:focus-within {
+  border: 2px solid white;
+}
+
+.technologiesCall #ContactBtnTech::before,
+.technologiesCall #ContactBtnTech::after {
+  content: "";
+  position: absolute;
+  width: 0; /* Start with zero width */
+  height: 2px;
+  background-color: white; /* Adjust the line color */
+  bottom: 0.9rem;
+  transition: width 0.3s ease; /* Animate the width change */
+}
+
+.technologiesCall #ContactBtnTech::before {
+  left: 50%; /* Start in the middle */
+  transform: translateX(-50%); /* Center the line horizontally */
+}
+
+.technologiesCall #ContactBtnTech::after {
+  right: 50%; /* Start in the middle */
+  transform: translateX(50%); /* Center the line horizontally */
+}
+
+.technologiesCall #ContactBtnTech:hover::before,
+.technologiesCall #ContactBtnTech:hover::after {
+  width: 50%; /* Grow to 50% width on hover */
+}
+@media screen and (max-width: 768px) {
+  .items-flex {
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .hero__actionList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  .hero__actionList > li {
+    margin-block: 1rem;
+  }
 }

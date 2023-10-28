@@ -4,33 +4,175 @@ main {
   background-color: #003367;
 }
 .hero__container {
-  min-height: 70dvh;
+  min-height: 100dvh;
   position: relative;
   overflow: hidden;
   text-align: center;
   display: flex;
+
   align-items: center;
   justify-content: center;
 }
 .content-container {
   margin-inline: 10%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .content-container > div {
-  margin-inline: 1fr;
+  margin-inline: 1rem;
+  min-width: 50dvh;
+  flex: 1;
 }
 .contact_encouragement_container {
   color: #fff;
-
   flex: 1;
+}
+.contact_encouragement_container h3 {
+  padding: 0.5rem;
+  position: relative;
+  margin-block: 2rem;
+}
+.contact_encouragement_container h3::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: white;
+  bottom: 0;
+  left: 5rem;
+  right: 5rem;
+}
+.contact_encouragement_container p {
+  text-align: left;
+  padding-inline: 1rem;
 }
 .form-container {
   background-color: #fff;
   flex: 1;
+  border-radius: 1rem;
 }
 #contactUs_Form {
-  background: red;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* border: 1px solid green; */
+
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.form__inputPair {
+  /* border: 1px solid red; */
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 50%;
+  align-items: left;
+}
+input[type="button"] {
+  margin: 1rem;
+  min-width: 100%;
+}
+.form__inputPair > input[type="text"],
+.form__inputPair > label {
+  text-align: left;
+  font-family: "Poppins";
+}
+
+.form__label::after {
+  content: "";
+  color: red;
+  display: none;
+  margin-left: 5px;
+}
+.form__label.error-message::after {
+  display: inline-block; /* Show the error message */
+}
+.form__inputPair:last-child {
+  flex: 2;
+}
+.form__inputPair > textarea {
+  resize: none;
+  min-width: 100%;
+  border: none;
+  outline: transparent;
+  border-bottom: 2px solid #003367;
+}
+.form__inputPair > textarea::-webkit-scrollbar {
+  width: 7px;
+  background-color: transparent;
+}
+
+.form__inputPair > textarea::-webkit-scrollbar-track {
+  background-color: transparent !important;
+}
+
+.form__inputPair > textarea::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 1rem;
+}
+.form_tb {
+  min-width: 100%;
+  border: none;
+  outline: transparent;
+  border-bottom: 2px solid #003367;
+}
+.encouragement__Logo {
+  display: flex;
+  padding: 1rem;
+  font-size: 2rem;
+  align-items: center;
+  line-height: 2rem;
+  color: #003367;
+}
+.encouragement__Logo h1 {
+  font-size: 2rem;
+}
+.encouragement__Logo > * {
+  padding-inline: 1rem;
+  /* border: 1px solid red; */
+}
+.circle__div {
+  padding: 0.5rem;
+  border-radius: 50%;
+  min-height: 75px;
+  min-width: 75px;
+  display: flex;
+  justify-content: center; /* Horizontally center the items */
+  align-items: center;
+  background: rgb(0, 51, 103);
+  background: linear-gradient(
+    45deg,
+    rgba(0, 51, 103, 1) 0%,
+    rgba(233, 131, 0, 1) 50%,
+    rgba(0, 51, 103, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.circle__div > i {
+  color: #003366;
+  font-size: 3rem;
+}
+
+.encouragement__slogan {
+  font-size: 0.9rem;
+  color: #ccc;
+  padding: 1rem;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  #contactUs_Form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .form__inputPair {
+    justify-self: center;
+    grid-column: 1 / span 2;
+  }
+  .form__inputPair > input[type="text"],
+  .form__inputPair > label {
+    text-align: left;
+  }
 }
