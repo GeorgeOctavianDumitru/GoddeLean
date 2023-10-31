@@ -55,7 +55,7 @@
                 <div class="related__articles">
                     <div class="latest-articles">
                         <h3>Latest Articles</h3>
-                            <ul>
+                            <ul class="latestArticles__Container row">
                                 <?php
                                     $args = array(
                                         'post_type' => 'post', // Adjust the post type if needed
@@ -67,8 +67,16 @@
 
                                     while ( $latest_articles->have_posts() ) : $latest_articles->the_post();
                                     ?>
-                                        <li>
-                                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                        <li class="singlePost_latestArticle">
+                                            <div class="latestArticle__container">
+                                                <?php
+                                                    if (has_post_thumbnail()) {
+                                                        $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'thumbnail');
+                                                        echo '<img src="' . esc_url($thumbnail_url) . '" alt="' . get_the_title() . '"/>';
+                                                    }
+                                                    ?>
+                                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                            </div>
                                         </li>
                                 <?php endwhile; wp_reset_postdata(); ?>
                             </ul>

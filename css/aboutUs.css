@@ -1,0 +1,52 @@
+.hero__container {
+  background-color: rgb(0, 51, 103, 1);
+  min-height: 60dvh;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(11, 34, 57, 0.75); /* 90% transparency (#003367) */
+  z-index: 1; /* Place the overlay above the background image */
+}
+.content__container {
+  margin-inline: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  z-index: 2;
+}
+.hero__image {
+  background-image: url("/wp-content/uploads/2023/09/Profile.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+.content__container > div {
+  margin-inline: 1rem;
+  min-width: 50dvh;
+  flex: 1;
+  min-height: 250px;
+  min-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutus__description {
+  margin-inline: 20%;
+  padding: 2rem;
+}

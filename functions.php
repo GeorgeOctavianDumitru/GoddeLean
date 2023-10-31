@@ -33,6 +33,10 @@
         if (is_page_template('template-contactus.php')) {
             wp_register_style('contact-us-style', get_template_directory_uri().'/css/contactUs.css', array(), false, 'all');
             wp_enqueue_style('contact-us-style');}
+        
+        if (is_page_template('template-aboutus.php')) {
+            wp_register_style('about-us-style', get_template_directory_uri().'/css/aboutUs.css', array(), false, 'all');
+            wp_enqueue_style('about-us-style');}
 
 
 

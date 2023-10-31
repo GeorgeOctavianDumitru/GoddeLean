@@ -171,3 +171,23 @@ main {
 .comment-meta {
   display: none;
 }
+.latestArticles__Container {
+  list-style: none;
+}
+.singlePost_latestArticle {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+.latestArticle__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  justify-content: center;
+}
+.latestArticle__container > img {
+  border-radius: 0.3rem;
+}
