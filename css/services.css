@@ -1,0 +1,166 @@
+.hero__container {
+  min-height: 90dvh;
+  /* margin-top:-15vh; */
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* z-index:-3; */
+  /* box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75); */
+}
+.hero__container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -3;
+}
+.hero__overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  display: flex; /* Use flexbox for the parent */
+  justify-content: center; /* Center the child horizontally */
+  align-items: center; /* Center the child vertically */
+}
+
+.hero__actionList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.hero__actionList > li a {
+  padding: 1rem 3rem;
+  margin-inline: 1rem;
+  border-radius: 5px;
+  color: white;
+}
+#ContactBtnTech {
+  background-color: #e98300;
+  padding: 1rem 3rem;
+  margin-top: 3rem;
+  border-radius: 5px;
+  color: white;
+}
+#LearMoreBtn {
+  border: 1px solid;
+}
+.hero__contentContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-inline: 10%;
+}
+.services__logo {
+  min-width: 500px;
+  min-height: 500px;
+  border: 1px solid white;
+}
+.breadcrumbs > a {
+  font-weight: 600;
+  color: #bebebe;
+  font-size: 1.1rem;
+}
+.breadcrumbs > span {
+  font-weight: 600;
+  font-family: "Century Gothic";
+  margin-inline: 0.2rem;
+}
+.breadcrumbs > a:last-child {
+  color: #fff;
+}
+.services__Slogan {
+  display: block;
+  text-align: left;
+  line-height: 2rem;
+}
+.services__Slogan > h1 {
+  padding-block: 1rem;
+}
+.services__Slogan > p {
+  max-width: 75%;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+.contact__Container {
+  margin-top: 5rem;
+}
+.section__Technologies {
+  min-height: 50dvh;
+  text-align: center;
+  margin-inline: 10%;
+
+  /* background: #123 url(//unsplash.it/900);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: white;
+    text-align: center; */
+}
+.techDisplay__Container {
+  max-height: 20dvh;
+  margin-bottom: 5rem;
+}
+.cardTech {
+  margin-inline: 5rem;
+}
+.cardTech > img {
+  max-height: 5dvh;
+  margin-top: 1rem;
+}
+.card h5 {
+  color: #000;
+}
+.card {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 1rem;
+  min-width: 300px;
+  min-height: 200px;
+}
+.card > ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; /* Allows flex items to wrap to the next row */
+  flex-direction: row; /* Default direction, can be omitted */
+  justify-content: flex-start;
+  padding: 0;
+}
+.card > ul li {
+  text-wrap: nowrap;
+  margin-inline: 0.25rem;
+  border-right: 3px solid #ccc;
+  color: #46484a;
+  padding-right: 0.5rem;
+  margin-block: 1rem;
+}
+.card > ul > li:last-child {
+  border: none;
+}
+.no-underline {
+  text-decoration: none; /* Remove the default underline on hover */
+}
+.items-flex {
+  display: flex;
+  padding: 2rem;
+  flex-wrap: no-wrap;
+  flex-direction: row;
+}
+.no-wrap {
+  flex-wrap: nowrap;
+}
+.wrap {
+  flex-wrap: wrap;
+}

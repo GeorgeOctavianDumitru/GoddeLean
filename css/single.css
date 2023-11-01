@@ -175,19 +175,25 @@ main {
   list-style: none;
 }
 .singlePost_latestArticle {
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   flex: 1;
-  justify-content: center;
+
   align-items: center;
 }
 .latestArticle__container {
   display: flex;
   flex-direction: column;
+  margin-top: 0;
   max-width: 250px;
   justify-content: center;
 }
 .latestArticle__container > img {
+  min-height: 250px;
+  min-width: 250px;
   border-radius: 0.3rem;
+}
+.latestArticle__container > a {
+  color: #48484a;
+  font-weight: 600;
 }

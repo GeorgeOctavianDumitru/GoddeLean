@@ -37,6 +37,11 @@
         if (is_page_template('template-aboutus.php')) {
             wp_register_style('about-us-style', get_template_directory_uri().'/css/aboutUs.css', array(), false, 'all');
             wp_enqueue_style('about-us-style');}
+        if (is_page_template('template-services.php')) {
+             wp_register_style('services-style',get_template_directory_uri().'/css/services.css',
+            array(),false,'all');
+            wp_enqueue_style('services-style');
+        }    
 
 
 
@@ -120,3 +125,35 @@ function theme_setup() {
 }
 
 add_action('after_setup_theme', 'theme_setup');
+
+function generateBreadcrumbs() {
+    $breadcrumbs = array();
+
+    // Add a link to the home page
+    $breadcrumbs[] = array(
+        'label' => 'Home',
+        'url' => home_url('/'),
+    );
+
+    // Check if the current page is the Services page
+    if (is_page('services')) {
+        // Add the current page's title as the final breadcrumb
+        $breadcrumbs[] = array(
+            'label' => 'Services',
+            'url' => get_permalink(),
+        );
+    }
+
+    // Output the breadcrumbs as HTML
+    if (!empty($breadcrumbs)) {
+        echo '<div class="breadcrumbs">';
+        $count = count($breadcrumbs);
+        foreach ($breadcrumbs as $key => $breadcrumb) {
+            echo '<a href="' . $breadcrumb['url'] . '">' . $breadcrumb['label'] . '</a>';
+            if ($key < $count - 1) {
+                echo '<span> > </span>';
+            }
+        }
+        echo '</div>';
+    }
+}
