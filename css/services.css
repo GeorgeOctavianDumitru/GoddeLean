@@ -1,5 +1,5 @@
 .hero__container {
-  min-height: 90dvh;
+  min-height: 85dvh;
   /* margin-top:-15vh; */
   position: relative;
   overflow: hidden;
@@ -97,6 +97,7 @@
 .contact__Container {
   margin-top: 5rem;
 }
+
 .section__Technologies {
   min-height: 50dvh;
   text-align: center;
@@ -107,6 +108,54 @@
     background-blend-mode: multiply;
     color: white;
     text-align: center; */
+}
+.section__ActionSection {
+  background-color: #003366;
+  min-height: 50dvh;
+  text-align: center;
+  padding: 10rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.section__ActionSection > h2 {
+  margin-block-end: 2rem;
+  position: relative;
+}
+.section__ActionSection > h2::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: calc(50% - 2.5rem);
+  height: 2px;
+  width: 5rem;
+  background-color: #e98300;
+}
+.section__Motivation {
+  min-height: 50dvh;
+  text-align: center;
+  padding-inline: 10rem;
+  padding-block: 2rem;
+  color: #003366;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.section__Motivation > h2 {
+  margin-block-end: 2rem;
+  position: relative;
+}
+.section__Motivation > h2::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: calc(50% - 2.5rem);
+  height: 2px;
+  width: 5rem;
+  background-color: #e98300;
 }
 .techDisplay__Container {
   max-height: 20dvh;
@@ -127,7 +176,7 @@
   border: 1px solid #ccc;
   padding: 1rem;
   margin: 1rem;
-  min-width: 300px;
+  min-width: 400px;
   min-height: 200px;
 }
 .card > ul {
@@ -158,9 +207,195 @@
   flex-wrap: no-wrap;
   flex-direction: row;
 }
+.no-decoration {
+  text-decoration: none;
+  color: inherit;
+}
 .no-wrap {
   flex-wrap: nowrap;
 }
 .wrap {
   flex-wrap: wrap;
+}
+.service__Title {
+  display: flex;
+  flex-direction: row;
+  padding-inline: 1rem;
+  align-items: center;
+}
+.service__Title > h5 {
+  padding-inline: 0.5rem;
+}
+.service__Title > i {
+  font-size: 2rem;
+}
+.contactBtn {
+  border: 1px solid white;
+  padding: 1rem 3rem;
+  margin-top: 3rem;
+  border-radius: 5px;
+  max-width: 20rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.contactBtn:hover,
+.contactBtn:focus-visible {
+  color: #003366 !important ;
+  background-color: #fff;
+}
+.reasonsContainer {
+  display: flex;
+  position: relative;
+
+  margin-inline: 10%;
+  margin-block: 2rem;
+}
+.reasons {
+  flex: 1;
+}
+.reasons > ul {
+  list-style: none;
+  text-align: left;
+  padding-block: 1rem;
+  counter-reset: myCounter;
+}
+.reasons > ul > li {
+  padding-block: 1rem;
+}
+.reasons > ul > li > p {
+  color: lightslategrey;
+}
+.reasons > ul > li > h4::before {
+  content: counter(myCounter); /* Use a counter to generate numbers */
+  counter-increment: myCounter;
+  display: inline-block;
+  width: 1.2em; /* Adjust the width as needed */
+  height: 1.2em; /* Adjust the height as needed */
+  text-align: center;
+  line-height: 1em;
+  border: 2px solid #000; /* Border style for the circle */
+  border-radius: 50%; /* Create a circle */
+  margin-right: 10px; /* Adjust the spacing between the number and text */
+  font-weight: bold;
+  border-color: #e98300;
+  color: #e98300; /* Optional: make the number bold */
+}
+.illustrations {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 1.5rem;
+}
+.illustrations > img {
+  max-width: 100%;
+  border-radius: 7px;
+  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+.inpageElement {
+  background-color: #003366;
+  min-height: 50dvh;
+  padding-block: 10dvh;
+}
+.contact-form {
+  margin-inline: 10%;
+  display: flex;
+  color: #fff;
+}
+.messageContainer {
+  position: relative;
+  padding-left: 30px; /* Adjust the left padding to control the distance of the line from the text */
+  counter-reset: myCounter2;
+  flex: 1;
+}
+
+.messageContainer h4 {
+  position: relative;
+  margin-bottom: 10px;
+}
+.messageContainer p {
+  margin-inline: 2em;
+  padding-bottom: 2rem;
+}
+.messageContainer h4::before {
+  content: counter(myCounter2); /* Use a counter to generate numbers */
+  counter-increment: myCounter2;
+  display: inline-block;
+  width: 1.2em; /* Adjust the width as needed */
+  height: 1.2em; /* Adjust the height as needed */
+  text-align: center;
+  line-height: 1em;
+  border: 2px solid #fff; /* Border style for the circle */
+  border-radius: 50%; /* Create a circle */
+  margin-right: 10px; /* Adjust the spacing between the number and text */
+  font-weight: bold;
+  border-color: #fff;
+  color: #fff; /* Optional: make the number bold */
+}
+
+/* Optional: Adjust the color and size of the h4 text */
+.messageContainer h4 {
+  color: #fff; /* Color of the h4 text */
+  font-weight: bold;
+}
+.side__dash {
+  position: relative;
+}
+
+#firstIndication::after {
+  content: "";
+  position: absolute;
+  clear: both;
+  display: block;
+  height: 70%;
+  border-left: 0.8px dashed white;
+  width: 4px;
+  position: absolute;
+  top: 35px;
+  left: 0.9rem;
+  z-index: 0;
+}
+.formContainer {
+  flex: 1;
+  width: 100%;
+  min-height: 60dvh;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 3rem;
+  display: flex;
+}
+
+.formContainer > input[type="text"] {
+  min-width: 100%;
+  border-radius: 7px;
+  max-height: 3rem;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  flex: 0.5;
+}
+
+.formContainer > input[type="button"] {
+  min-width: 100%;
+  margin-top: 2rem;
+  max-height: 3rem;
+}
+.formContainer > :last-child {
+  flex: 2;
+}
+.formContainer > textarea {
+  resize: none;
+  min-width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .section__ActionSection {
+    padding: 1rem;
+  }
 }

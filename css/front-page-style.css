@@ -148,9 +148,22 @@ h4.title {
 
 .section__Technologies {
   color: #fff;
-  background-color: #3169dd;
+  background-color: #003366;
   margin: 0;
   padding-inline: 10%;
+}
+.heading > h2 {
+  margin-block-end: 2rem;
+  position: relative;
+}
+.heading > h2::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: calc(50% - 2.5rem);
+  height: 2px;
+  width: 5rem;
+  background-color: #e98300;
 }
 .section__Technologies .heading {
   padding: 2rem;

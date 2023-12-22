@@ -25,13 +25,24 @@ Template Name: Contact Us
                    </div>
 
                 </div>
-                <div class="encouragement__slogan"> 
+                <div class="encouragement__slogan" id="encouragementSlogan"> 
                     <p>
                         Have a business idea? Our team of software experts can assist you 
                         in creating a customized solution to achieve your specific goals
                     </p>    
                 </div>
-                <form id="contactUs_Form">
+                <div class="success__container" id="successMessage">
+                    
+                    <div class="success__div">
+                        <i class="bi bi-check-circle-fill"></i>
+                    </div>
+                    <em>Thank you for your interst! Your enquiry has been succesfully submitted!</em>
+                    
+                </div>
+                
+                <?php get_template_part('template-parts/form','enquiry');?>
+                
+                <!-- <form id="contactUs_Form">
                     <div class="form__inputPair">
                         <label class="form__label" id="lblName" for="txtName">Name:</label>
                         <input type="text" class="form_tb" id="txtName"/>
@@ -57,7 +68,7 @@ Template Name: Contact Us
                     </div>
                     
                    
-                </form>
+                </form> -->
             </div>
        </div>
     </section>

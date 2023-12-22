@@ -1,41 +1,52 @@
-const form = document.getElementById("contactUs_Form");
-const nameInput = document.getElementById("txtName");
-const surnameInput = document.getElementById("txtSurname");
-const phoneInput = document.getElementById("txtPhone");
-const emailInput = document.getElementById("txtEmail");
-const messageInput = document.getElementById("txtMessage");
-const submitButton = document.getElementById("submitButton");
+const Name = document.getElementById('txtName');
 
-const nameLabel = document.getElementById("lblName");
+Name.addEventListener('focusout', validateName);
+function validateName() {
+  // Get the input element by its ID
+  //var Name = document.getElementById("Name");
 
-nameInput.addEventListener("keypress", onlyAlphabetsKey);
-
-
-nameInput.addEventListener("blur",function(){
-    if(nameInput.value.trim()===""){
-      nameInput.classList.add("error-message");
-      nameLabel.classList.add("error-message");
-      nameLabel.style.content = "This field is mandatory Gigele"; // Add the message
-    }
-    else{
-      nameInput.classList.remove("error-message");
-      nameLabel.classList.remove("error-message");
-      nameLabel.style.content = ""; // Remove the message
-    }
-});
-
-
-
-function onlyAlphabetsKey(event) {
-  // Get the pressed key code
-  const keyCode = event.keyCode || event.which;
-
-  // Allow alphabetic characters (A-Z and a-z)
-  if ((keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122)) {
-    return true;
+  if (Name.value.trim() === "") {
+    alert("Name is mandatory");
   } else {
-    // Prevent the input of non-alphabetic characters
-    event.preventDefault();
-    return false;
+    var inputValue = Name.value;
+    var capitalizedText =
+      inputValue.charAt(0).toUpperCase() + inputValue.slice(1);
+    Name.value = capitalizedText;
   }
 }
+
+$('#contactUs_Form').submit(function(event){
+  
+  event.preventDefault();
+
+  var endpoint = your_ajax_object.ajaxurl;
+
+  var form = $('#contactUs_Form').serialize();
+
+  var formdata = new FormData;
+  formdata.append('action','enquiry');
+  formdata.append('enquiry', form);
+
+  $.ajax(endpoint,{
+    type:'POST',
+    data:formdata,
+    processData:false,
+    contentType:false,
+
+    success:function(res){
+      //$("#contactUs_Form").fadeOut(200);
+      $("#encouragementSlogan").css("display", "none"); // Hide #encouragementSlogan
+      $("#successMessage").css("display", "flex"); // Show #successMessage as flex container
+      $("#contactUs_Form").trigger("reset");
+      //$("#contactUs_Form").fadeIn(500);
+      setTimeout(function () {
+        $("#encouragementSlogan").css("display", "flex"); // Show #encouragementSlogan
+        $("#successMessage").css("display", "none"); // Hide #successMessage
+      }, 5000); // 1000 milliseconds = 1 second
+    },
+    error:function(err){
+
+    }
+  })
+});
+

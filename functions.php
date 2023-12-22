@@ -67,7 +67,9 @@
             wp_enqueue_script('single');
         }
         if(is_page_template('template-contactus.php')){
-            wp_register_script('contactForm',get_template_directory_uri().'/js/ContactForm.js', 'jqueryLoc',false,true);
+            wp_register_script('contactForm',get_template_directory_uri().'/js/contactForm.js', 'jqueryLoc',false,true);
+            //Localize the script with the admin-ajax.php URL
+            wp_localize_script('contactForm','your_ajax_object', array('ajaxurl'=>admin_url('admin-ajax.php')));
             wp_enqueue_script('contactForm');
         }
     }
@@ -156,4 +158,45 @@ function generateBreadcrumbs() {
         }
         echo '</div>';
     }
+}
+
+add_action('wp_ajax_enquiry','enquiry_form');
+add_action('wp_ajax_nopriv_enquiry','enquiry_form');
+
+function enquiry_form()
+{
+    $formdata=[];
+    wp_parse_str($_POST['enquiry'], $formdata);
+
+    //Admin email address
+    $admin_email = get_option('admin_email');
+    
+    $headers[]='Content-Type: text/html; chaset=UTF-8';
+    $headers[]='From:New Enquiry from Contact Us<' .$admin_email .'>';
+    $headers[]='Replay-to:' .$formdata['email'];
+    //Who are we sending the email to?
+    $send_to = $admin_email;
+    //Subject
+    $subject = "Enquiry from " .$formdata['name'] .' ' .$formdata['surname'];
+    //Message
+    $message='';
+    foreach($formdata as $index => $field){
+        $message .= '<strong>' .$index .'</strong>:' . $field .'<br/>';
+    }
+
+    try{
+        if(wp_mail($send_to,$subject,$message,$headers)){
+            wp_send_json_success('Email sent!');
+        }
+        else{
+            wp_send_json_error('Email error!');
+        }
+    }
+
+    catch(Exception $e){
+        wp_send_json_error($e->getMessage());
+    }
+
+
+    //wp_send_json_success($formdata['name']);
 }

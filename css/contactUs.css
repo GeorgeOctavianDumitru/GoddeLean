@@ -59,6 +59,17 @@ main {
   display: flex;
   flex-wrap: wrap;
 }
+.success__container {
+  display: none;
+  /* border: 1px solid black; */
+  /* display: none; */
+  justify-content: center; /* Center content vertically */
+  align-items: center;
+  font-size: 0.9rem;
+  color: #ccc;
+  padding: 1rem;
+  text-align: left;
+}
 .form__inputPair {
   /* border: 1px solid red; */
   padding: 0.5rem;
@@ -67,7 +78,7 @@ main {
   min-width: 50%;
   align-items: left;
 }
-input[type="button"] {
+input[type="submit"] {
   margin: 1rem;
   min-width: 100%;
 }
@@ -130,6 +141,16 @@ input[type="button"] {
 .encouragement__Logo > * {
   padding-inline: 1rem;
   /* border: 1px solid red; */
+}
+.success__div {
+  color: green;
+  border-radius: 50%;
+  min-height: 50px;
+  min-width: 50px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center; /* Horizontally center the items */
+  align-items: center;
 }
 .circle__div {
   padding: 0.5rem;
